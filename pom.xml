@@ -47,18 +47,7 @@
   </plugin>  
  </plugins>  
 	</build>
-	<repositories>
-		<repository>
-			<releases />
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<id>openqa-releases</id>
-			<name>OpenQA Releases</name>
-			<url>http://nexus.openqa.org/content/repositories/releases
-			</url>
-		</repository>
-	</repositories>
+	
 	<dependencies>
 		<dependency>
 			<groupId>commons-beanutils</groupId>
