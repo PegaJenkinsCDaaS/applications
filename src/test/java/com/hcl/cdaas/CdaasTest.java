@@ -34,7 +34,7 @@ public class CdaasTest extends LisaWebDriverBase {
 		chromeDriver.flowTesting();
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		driver.close();
-		
+		driver.quit();
 		
 		}
 
