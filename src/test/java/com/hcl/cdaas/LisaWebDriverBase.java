@@ -8,6 +8,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -40,7 +41,11 @@ public abstract class LisaWebDriverBase {
 		 //ClassLoader loader = LisaWebDriverBase.class.getClassLoader();
 	     //System.out.println("<---->"+loader.toString());
 		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-		driver = new ChromeDriver();
+		//System.setProperty("webdriver.chrome.driver", "target/classes/chromedriver.exe");
+		ChromeOptions options = new ChromeOptions();
+	    // setting headless mode to true.. so there isn't any ui
+	    options.addArguments("headless");
+		driver = new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		//driver.manage().window().maximize();
 	}
