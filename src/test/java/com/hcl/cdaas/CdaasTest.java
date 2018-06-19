@@ -54,7 +54,7 @@ public class CdaasTest extends LisaWebDriverBase {
 		driver.get(baseURL);*/
 		//driver.manage().window().maximize();
 		
-		goToUrl("http://ansiblepegaproj2.westeurope.cloudapp.azure.com/prweb");
+		goToUrl(System.getProperty("SourceURL"));
 		String expectedTitle = "Pega 7";
         String actualTitle = "Pega 7";
 
