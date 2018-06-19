@@ -39,7 +39,7 @@ public abstract class LisaWebDriverBase {
 	protected void initializeChrome() {
 		 //ClassLoader loader = LisaWebDriverBase.class.getClassLoader();
 	     //System.out.println("<---->"+loader.toString());
-		System.setProperty("webdriver.chrome.driver", "target/classes/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		//driver.manage().window().maximize();
